@@ -67,6 +67,13 @@ body {
   outline: 0 !important;
 }
 
+.icon {
+  max-width: 100px;
+  width: 60%;
+  padding: 5%;
+  margin: 10% auto;
+}
+
 hr {
   box-sizing: content-box;
   height: 0;
