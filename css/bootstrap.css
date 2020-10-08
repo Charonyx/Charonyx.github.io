@@ -70,8 +70,9 @@ body {
 .icon {
   max-width: 100px;
   width: 60%;
-  padding: 5%;
-  margin: 10% auto;
+  padding: 1%;
+  margin: 15% 5%;
+  
 }
 
 hr {
