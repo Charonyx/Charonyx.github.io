@@ -60,7 +60,10 @@ body {
   line-height: 1.5;
   color: #212529;
   text-align: left;
-  background-color: #e1cab2;
+  text-shadow: 0px 0px 7px #fff;
+  background-color: #cdedfd;
+  background-image: linear-gradient(319deg, #cdedfd 0%, #ffec82 47%, #ffcfd2 100%);
+
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -68,16 +71,26 @@ body {
 }
 
 /*
-
 .cover-container {
     background-image: url(/my-port/static/media/cover2.163001df.jpg);
     background-size: 100% 100%;
 }
+
+.cssfont {
+  background: -webkit-linear-gradient(#0097C5, #56E7FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 */
+
 .img-circle {
-	border-radius: 50%;
+	border-radius: 50%;	
+	min-width: 250px;
+	min-height: 250px;	
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .img-circle:hover {
+	box-shadow: 0px 0px 50px 10px #F2B2CF;
 	transform: scale(1.3);
 	transition: 0.2s all;
 	cursor: zoom-in;
@@ -94,7 +107,7 @@ body {
 	font-size: 56px;
 	letter-spacing: 4px;
 	font-weight: 500;
-	text-shadow: 3px 3px 10px darkred;
+	text-shadow: 4px -5px 1px #fff,-3px 10px 20px #FFA493;
 }
 .contact-box {
   position: fixed; 
