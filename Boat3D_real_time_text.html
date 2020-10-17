@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real time text</title>
+</head>
+<body>
+    <div class="input-box">
+        <label>Input: </label>
+        <input id="realtime" placeholder="input here..." oninput="realTime()">
+        <!-- use h1 id="rt-text-1" for real time text. -->
+        <h1 class="rt-text" id="rt-text-1">Use me for real time text.</h1> 
+    </div>
+</body>
+<script>
+    function realTime() {
+    	var text = document.getElementById("realtime").value;
+        document.getElementById("rt-text-1").innerHTML = text;
+    }
+	
+//	<input value="" oninput="realTime(this.value)"> //in HTML , onchange need enter to show realTime , ยังไม่ได้ลอง document.queryselector 
+//	function realTime(val) {
+//  		document.getElementById("realtime").innerHTML = val;
+//	}	
+</script>
+</html>
