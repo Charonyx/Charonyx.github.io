@@ -138,10 +138,10 @@
   background-color: indigo;
 }
 .body.dark .cir {
-  background-color: #fae7ba;
+  background-color: #FF2692;
 }
 .body.dark .cir:hover {
-  background-color: #FF2692;
+  background-color: #fae7ba;
 }
 .mark {
   text-transform: uppercase;

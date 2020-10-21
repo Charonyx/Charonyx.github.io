@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"
+        integrity="sha256-/H4YS+7aYb9kJ5OKhFYPUjSJdrtV6AeyJOtTkw6X72o=" crossorigin="anonymous"></script>
+    <script>
+        function setCookie(cname, cvalue) {
+            document.cookie = cname + "=" +  CryptoJS.AES.encrypt(cvalue, "U2FsdGVkX18ZUVvShFSES21qHsQEqZXMxQ9zgHy+bu0=") + ";" + ";path=/";
+        }
+
+        function login() {
+            var user = document.getElementById("txtuser").value;
+            var pass = document.getElementById("txtpass").value;
+            if (user != "" && pass != "") {
+                setCookie('username', user);
+                setCookie('password', pass);
+                alert("Saved!");
+                // alert(document.cookie);
+            }
+            else {
+                alert("please fill username and password!");
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    <div>
+        <a>Username</a>
+        <input id='txtuser'>
+    </div>
+    <div>
+        <a>Password</a>
+        <input id='txtpass' type="password">
+    </div>
+    <div>
+        <button type="button" onclick="login()">Login</button>
+    </div>
+</body>
+
+</html>

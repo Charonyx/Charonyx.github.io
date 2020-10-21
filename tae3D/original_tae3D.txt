@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <style>
+img {
+width: 200px;
+}
+.hoverzoom img{
+    height: 30%;
+}
+
+.hoverzoom{
+    margin:50px;
+}
+
+.clickfly img{
+    height: 30%;
+}
+
+.clickfly{
+    margin:50px;
+}
+
+.hell p, .heaven p{
+    margin:auto auto;
+}
+
+.hell{
+    width: 80px;
+    height: 80px;
+    border:1px solid black;
+    border-radius:30px;
+    text-align: center;
+    line-height: 80px;
+    overflow: hidden;
+    margin: 50px;
+}
+
+.heaven{
+    width: 80px;
+    height: 80px;
+    border:1px solid black;
+    border-radius:30px;
+    text-align: center;
+    line-height: 80px;
+    overflow: hidden;
+    margin:50px;
+}
+
+#flip{
+    transform: scale(-1,-1);
+}
+
+.heaven:hover + #spin{
+    animation-name: spin;
+    animation-duration: 5000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; 
+}
+
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+
+
+    </style>
+    <body>
+        <div class="sassada">
+            <p>สวัสดีครับ ท่านสมาชิกแลป ISAG</p>
+        </div>
+        <div class="box">
+            <div class="hoverzoom">
+                <img src="https://opportunities.sriexecutive.com/wp-content/uploads/2018/08/IMG-Academy.jpg" />
+            </div>
+            <div class="clickfly">
+                <img src="https://opportunities.sriexecutive.com/wp-content/uploads/2018/08/IMG-Academy.jpg"/>
+            </div>
+            
+            <div class="hell">
+                <div class="up">
+                    <p>ไม่รู้คิด</p>
+                    <p>ตกนรก</p>
+                </div>
+            </div>
+            <div class="heaven">
+                <div class="spin">
+                    <p>รู้คิด</p>
+                    <p id="flip">เป็นอรหันต์</p>
+                </div>
+            </div>  
+        </div>
+    </body>
+</html>

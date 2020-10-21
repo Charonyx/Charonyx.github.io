@@ -38,12 +38,12 @@
   <body>
     <form class="content" id="regex-form" onsubmit="validateForm()">
       <div style="font-weight: 800; margin: 5px">RegEx Pattern</div>
-		<input type="text" id="username" class="regex-input" placeholder="Username" 
+		<input id="username" class="regex-input" placeholder="Username" 
 			 pattern="(?=.*\d)(?=.*[a-z]).{4,20}"  
 			 title="Must contain 4 - 20 characters &#013;&#9;&bull; least one number &#013;&#9;&bull; least one lowercase letter" required/>
-      	<input type="password" id="password" class="regex-input" placeholder="Password" 
-			 pattern="(?=.*\d)(?=.*[a-Z])(?=.*[a-z])(?=.*[!”#$%&'()*+,-./:;<=>?@[\]^_`{|}~/]).{8,}" 
-			 title="Must contain at least 8 or more characters  &#013;&#9;&bull; least one number &#013;&#9;&bull; least one uppercase letter &#013;&#9;&bull; least one lowercase letter &#013;&#9;&bull; least one special character [!”#$%&'()*+,-./:;<=>?@[\]^_`{|}~/]" required/>
+      	<input id="password" class="regex-input" placeholder="Password" 
+			 pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\\!”#$%'()*+,-./:;?@\^_`{|}~/])[A-Za-z\d\\!”#$%'()*+,-./:;?@\^_`{|}~/]{8,}$" 
+			 title="Must contain at least 8 or more characters  &#013;&#9;&bull; least one number &#013;&#9;&bull; least one uppercase letter &#013;&#9;&bull; least one lowercase letter &#013;&#9;&bull; least one special character \\!”#$%'()*+,-./:;?@\^_`{|}~/ " required/>
       <input type="submit" class="enter-bt" />
     </form>
   </body>

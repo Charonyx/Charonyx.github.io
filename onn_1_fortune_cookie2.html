@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"
+        integrity="sha256-/H4YS+7aYb9kJ5OKhFYPUjSJdrtV6AeyJOtTkw6X72o=" crossorigin="anonymous"></script> -->
+    <script>
+        //ขึ้นว่า object promise
+        function sha512(str) {
+            return crypto.subtle.digest("SHA-512", new TextEncoder("utf-8").encode(str)).then(buf => {
+                return Array.prototype.map.call(new Uint8Array(buf), x=>(('00'+x.toString(16)).slice(-2))).join('');
+            }
+            );
+        }
+        function setCookie(cname, cvalue) {
+            document.cookie = cname + "=" + cvalue + ";" + ";path=/";
+        }
+
+        function login() {
+            var user = document.getElementById("txtuser").value;
+            var pass = document.getElementById("txtpass").value
+            if (user != "" && pass != "") {
+                var usereiei = sha512(user).then(x => console.log(x));
+                var passeiei = sha512(pass).then(x => console.log(x));
+                setCookie('username', usereiei);
+                setCookie('password', passeiei);
+                alert("Saved!");
+                alert(document.cookie);
+            }
+            else {
+                alert("please fill username and password!");
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    <div>
+        <a>Username</a>
+        <input id='txtuser'>
+    </div>
+    <div>
+        <a>Password</a>
+        <input id='txtpass' type="password">
+    </div>
+    <div>
+        <button type="button" onclick="login()">Login</button>
+    </div>
+</body>
+
+</html>
