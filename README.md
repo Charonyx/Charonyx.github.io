@@ -7,25 +7,23 @@
     ```
     git init
     ```
-    <br>
+    
     - อัปไฟล์ 
     ```
     git add .               // ไฟล์ทั้งหมด
     git add <<ชื่อไฟล์>>       // เฉพาะไฟล์
     ```
-    <br>
+
     - ตั้งชื่อ commit (commit คือคำอิบายใน GitHub)
     ```
     git commit -m "<<คำอธิบายในการอัปขึ้น GitHub>>"
-
     ```
-    <br>
+
     - remote เชือม repo บนเว็บ
     ```
     git remote add <<origin>> <<URL>>
-
     ```
-    <br>
+
     - push ขึ้น GitHub
     ```
     git push <<origin>> -u <<master>>
